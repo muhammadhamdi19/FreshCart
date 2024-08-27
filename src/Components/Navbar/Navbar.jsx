@@ -1,6 +1,6 @@
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import logo from "../../assets/images/freshcart-logo.svg";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { authContext } from "../../Context/AuthContext";
 import { cartContext } from "../../Context/CartContext";
 import { wishlistContext } from "../../Context/WishlistContext";
@@ -15,7 +15,7 @@ const Navbar = () => {
     setToken(null);
     localStorage.removeItem("tkn");
     nav("/Login");
-  }
+  }  
   return (
     <>
       <nav className="bg-gray-100  fixed w-full z-20 top-0 start-0 border-b border-gray-200 ">
@@ -69,7 +69,7 @@ const Navbar = () => {
               </>
             )}
 
-            <button
+            {token ? <button
               data-collapse-toggle="navbar-sticky"
               type="button"
               className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
@@ -92,7 +92,7 @@ const Navbar = () => {
                   d="M1 1h15M1 7h15M1 13h15"
                 />
               </svg>
-            </button>
+            </button>:""}
           </div>
           <div
             className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"

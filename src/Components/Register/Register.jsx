@@ -76,214 +76,216 @@ const Register = () => {
         Registration Form
       </h2>
 
-      <form onSubmit={formik.handleSubmit} className="max-w-md mx-auto mt-16">
-        <div className="relative z-0 w-full mb-5 group">
-          <input
-            type="text"
-            name="name"
-            id="name"
-            className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none   focus:outline-none focus:ring-0 focus:border-green-600 peer"
-            placeholder=" "
-            value={formik.values.name}
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-          />
-          {formik.errors.name && formik.touched.name ? (
-            <div>
+      <div className="w-[90%] mx-auto">
+        <form onSubmit={formik.handleSubmit} className="max-w-md mx-auto mt-16">
+          <div className="relative z-0 w-full mb-5 group">
+            <input
+              type="text"
+              name="name"
+              id="name"
+              className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none   focus:outline-none focus:ring-0 focus:border-green-600 peer"
+              placeholder=" "
+              value={formik.values.name}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+            />
+            {formik.errors.name && formik.touched.name ? (
+              <div>
+                <label
+                  htmlFor="name"
+                  className="absolute text-sm text-red-600 dark:text-red-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
+                >
+                  Name
+                </label>
+                <p
+                  id="name_help"
+                  className="mt-2 text-xs text-red-600 dark:text-red-400"
+                >
+                  <span className="font-medium">Error </span>
+                  {formik.errors.name}
+                </p>
+              </div>
+            ) : (
               <label
                 htmlFor="name"
-                className="absolute text-sm text-red-600 dark:text-red-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
+                className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-green-600  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
               >
                 Name
               </label>
-              <p
-                id="name_help"
-                className="mt-2 text-xs text-red-600 dark:text-red-400"
-              >
-                <span className="font-medium">Error </span>
-                {formik.errors.name}
-              </p>
-            </div>
-          ) : (
-            <label
-              htmlFor="name"
-              className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-green-600  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-            >
-              Name
-            </label>
-          )}
-        </div>
+            )}
+          </div>
 
-        <div className="relative z-0 w-full mb-5 group">
-          <input
-            value={formik.values.phone}
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-            type="tel"
-            name="phone"
-            id="phone"
-            className="block mt-10 py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none   focus:outline-none focus:ring-0 focus:border-green-600 peer"
-            placeholder=" "
-          />
-          {formik.errors.phone && formik.touched.phone ? (
-            <div>
+          <div className="relative z-0 w-full mb-5 group">
+            <input
+              value={formik.values.phone}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              type="tel"
+              name="phone"
+              id="phone"
+              className="block mt-10 py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none   focus:outline-none focus:ring-0 focus:border-green-600 peer"
+              placeholder=" "
+            />
+            {formik.errors.phone && formik.touched.phone ? (
+              <div>
+                <label
+                  htmlFor="phone"
+                  className="absolute text-sm text-red-600 dark:text-red-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
+                >
+                  Phone
+                </label>
+                <p
+                  id="phone_help"
+                  className="mt-2 text-xs text-red-600 dark:text-red-400"
+                >
+                  <span className="font-medium">Error </span>
+                  {formik.errors.phone}
+                </p>
+              </div>
+            ) : (
               <label
                 htmlFor="phone"
-                className="absolute text-sm text-red-600 dark:text-red-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
+                className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-green-600  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
               >
                 Phone
               </label>
-              <p
-                id="phone_help"
-                className="mt-2 text-xs text-red-600 dark:text-red-400"
-              >
-                <span className="font-medium">Error </span>
-                {formik.errors.phone}
-              </p>
-            </div>
-          ) : (
-            <label
-              htmlFor="phone"
-              className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-green-600  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-            >
-              Phone
-            </label>
-          )}
-        </div>
+            )}
+          </div>
 
-        <div className="relative z-0 w-full mb-5 group">
-          <input
-            value={formik.values.email}
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-            type="email"
-            name="email"
-            id="email"
-            className="block mt-10 py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none   focus:outline-none focus:ring-0 focus:border-green-600 peer"
-            placeholder=" "
-          />
-          {formik.errors.email && formik.touched.email ? (
-            <div>
+          <div className="relative z-0 w-full mb-5 group">
+            <input
+              value={formik.values.email}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              type="email"
+              name="email"
+              id="email"
+              className="block mt-10 py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none   focus:outline-none focus:ring-0 focus:border-green-600 peer"
+              placeholder=" "
+            />
+            {formik.errors.email && formik.touched.email ? (
+              <div>
+                <label
+                  htmlFor="email"
+                  className="absolute text-sm text-red-600 dark:text-red-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
+                >
+                  Email
+                </label>
+                <p
+                  id="email_help"
+                  className="mt-2 text-xs text-red-600 dark:text-red-400"
+                >
+                  <span className="font-medium">Error </span>
+                  {formik.errors.email}
+                </p>
+              </div>
+            ) : (
               <label
                 htmlFor="email"
-                className="absolute text-sm text-red-600 dark:text-red-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
+                className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-green-600  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
               >
                 Email
               </label>
-              <p
-                id="email_help"
-                className="mt-2 text-xs text-red-600 dark:text-red-400"
-              >
-                <span className="font-medium">Error </span>
-                {formik.errors.email}
-              </p>
-            </div>
-          ) : (
-            <label
-              htmlFor="email"
-              className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-green-600  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-            >
-              Email
-            </label>
-          )}
-        </div>
+            )}
+          </div>
 
-        <div className="relative z-0 w-full mb-5 group">
-          <input
-            value={formik.values.password}
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-            type="password"
-            name="password"
-            id="password"
-            className="block mt-10 py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none   focus:outline-none focus:ring-0 focus:border-green-600 peer"
-            placeholder=" "
-          />
-          {formik.errors.password && formik.touched.password ? (
-            <div>
+          <div className="relative z-0 w-full mb-5 group">
+            <input
+              value={formik.values.password}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              type="password"
+              name="password"
+              id="password"
+              className="block mt-10 py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none   focus:outline-none focus:ring-0 focus:border-green-600 peer"
+              placeholder=" "
+            />
+            {formik.errors.password && formik.touched.password ? (
+              <div>
+                <label
+                  htmlFor="password"
+                  className="absolute text-sm text-red-600 dark:text-red-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
+                >
+                  Password
+                </label>
+                <p
+                  id="password_help"
+                  className="mt-2 text-xs text-red-600 dark:text-red-400"
+                >
+                  <span className="font-medium">Error </span>
+                  {formik.errors.password}
+                </p>
+              </div>
+            ) : (
               <label
                 htmlFor="password"
-                className="absolute text-sm text-red-600 dark:text-red-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
+                className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-green-600  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
               >
                 Password
               </label>
-              <p
-                id="password_help"
-                className="mt-2 text-xs text-red-600 dark:text-red-400"
-              >
-                <span className="font-medium">Error </span>
-                {formik.errors.password}
-              </p>
-            </div>
-          ) : (
-            <label
-              htmlFor="password"
-              className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-green-600  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-            >
-              Password
-            </label>
-          )}
-        </div>
+            )}
+          </div>
 
-        <div className="relative z-0 w-full mb-5 group">
-          <input
-            value={formik.values.rePassword}
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-            type="password"
-            name="rePassword"
-            id="rePassword"
-            className="block mt-10 py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none   focus:outline-none focus:ring-0 focus:border-green-600 peer"
-            placeholder=" "
-          />
-          {formik.errors.rePassword && formik.touched.rePassword ? (
-            <div>
+          <div className="relative z-0 w-full mb-5 group">
+            <input
+              value={formik.values.rePassword}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              type="password"
+              name="rePassword"
+              id="rePassword"
+              className="block mt-10 py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none   focus:outline-none focus:ring-0 focus:border-green-600 peer"
+              placeholder=" "
+            />
+            {formik.errors.rePassword && formik.touched.rePassword ? (
+              <div>
+                <label
+                  htmlFor="repassword"
+                  className="absolute text-sm text-red-600 dark:text-red-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
+                >
+                  Repassword
+                </label>
+                <p
+                  id="standard_success_help"
+                  className="mt-2 text-xs text-red-600 dark:text-red-400"
+                >
+                  <span className="font-medium">Error </span>
+                  {formik.errors.rePassword}
+                </p>
+              </div>
+            ) : (
               <label
-                htmlFor="repassword"
-                className="absolute text-sm text-red-600 dark:text-red-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
+                htmlFor="rePassword"
+                className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-green-600  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
               >
                 Repassword
               </label>
-              <p
-                id="standard_success_help"
-                className="mt-2 text-xs text-red-600 dark:text-red-400"
-              >
-                <span className="font-medium">Error </span>
-                {formik.errors.rePassword}
-              </p>
-            </div>
-          ) : (
-            <label
-              htmlFor="rePassword"
-              className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-green-600  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-            >
-              Repassword
-            </label>
-          )}
-        </div>
+            )}
+          </div>
 
-        <button
-          type="submit"
-          className="text-white mt-5 bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center "
-        >
-          {loading == true ? (
-            <div className="flex justify-center">
-              <TailSpin
-                visible={true}
-                height="30"
-                width="30"
-                color="#fff"
-                ariaLabel="tail-spin-loading"
-                radius="1"
-                wrapperStyle={{}}
-                wrapperClass=""
-              />
-            </div>
-          ) : (
-            "Register"
-          )}
-        </button>
-      </form>
+          <button
+            type="submit"
+            className="text-white mt-5 bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center "
+          >
+            {loading == true ? (
+              <div className="flex justify-center">
+                <TailSpin
+                  visible={true}
+                  height="30"
+                  width="30"
+                  color="#fff"
+                  ariaLabel="tail-spin-loading"
+                  radius="1"
+                  wrapperStyle={{}}
+                  wrapperClass=""
+                />
+              </div>
+            ) : (
+              "Register"
+            )}
+          </button>
+        </form>
+      </div>
 
       <Footer />
     </>
