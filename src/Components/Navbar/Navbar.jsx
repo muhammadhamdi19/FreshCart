@@ -103,7 +103,7 @@ const Navbar = () => {
                 <>
                   <li>
                     <NavLink
-                      to="/"
+                      to="/FreshCart/"
                       className={({ isActive }) =>
                         isActive
                           ? "block py-2 px-3 text-white bg-green-700 rounded md:bg-transparent md:text-green-700 md:p-0 "

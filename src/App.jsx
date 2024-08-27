@@ -29,7 +29,7 @@ const route = createBrowserRouter([
     {path :"/login" ,element:<Login/>},
     {path: "/register",element: <Register/>},
     {path: "*",element: <NotFound/>},
-    {path: "/",element: <ProtectedRoute>
+    {path: "/FreshCart/",element: <ProtectedRoute>
       <Home/>
     </ProtectedRoute>},
     {path: "/productDetails/:id",element: <ProtectedRoute>

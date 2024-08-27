@@ -43,7 +43,7 @@ const Login = () => {
       setLoading(false);
       setToken(res.data.token);
       localStorage.setItem("tkn", res.data.token);
-      nav("/");
+      nav("/FreshCart/");
     } catch (error) {
       console.log(error);
       toast.error(error.response.data.message);
