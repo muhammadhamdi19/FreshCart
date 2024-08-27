@@ -7,6 +7,7 @@ import { MutatingDots } from "react-loader-spinner";
 import { useQuery } from "react-query";
 import axios from "axios";
 import { Helmet } from "react-helmet";
+import Login from "../Login/Login";
 
 const Home = () => {
   async function getAllProducts() {
@@ -34,7 +35,7 @@ const Home = () => {
   }
   return (
     <>
-      <Helmet>
+      {localStorage.getItem("tkn") != null ? <><Helmet>
         <title>FreshCart - Home</title>
       </Helmet>
       <section className="py-28 ">
@@ -55,7 +56,7 @@ const Home = () => {
 
       <section>
         <Products />
-      </section>
+      </section> </> : <Login/>}
     </>
   );
 };

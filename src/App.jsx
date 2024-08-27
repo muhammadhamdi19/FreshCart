@@ -26,10 +26,10 @@ import ResetPassword from "./Components/ResetPassword/ResetPassword"
 function App() {
 const route = createBrowserRouter([
   {path : "/" ,element : <Layout/>, children :[
-    {path :"/" ,element:<Login/>},
+    {path :"/login" ,element:<Login/>},
     {path: "/register",element: <Register/>},
     {path: "*",element: <NotFound/>},
-    {path: "/home",element: <ProtectedRoute>
+    {path: "/",element: <ProtectedRoute>
       <Home/>
     </ProtectedRoute>},
     {path: "/productDetails/:id",element: <ProtectedRoute>

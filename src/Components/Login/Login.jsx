@@ -58,7 +58,7 @@ const Login = () => {
   });
   return (
     <>
-      {localStorage.getItem("tkn") == null ? <>
+      
         <Helmet>
         <title>FreshCart - Login</title>
       </Helmet>
@@ -171,7 +171,7 @@ const Login = () => {
       </form>
 
       <Footer />
-      </> : <Home/>}
+      
     </>
   );
 };
